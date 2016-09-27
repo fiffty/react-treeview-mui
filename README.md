@@ -2,8 +2,8 @@
 
 A Treeview React Component that can use [material-ui](https://github.com/callemall/material-ui)'s styling.
 
-[LIVE DEMO](https://fiffty.github.io/react-treeview-mui/)
-[Example code](https://github.com/fiffty/react-treeview-mui/blob/master/demo/example.js)
+* [LIVE DEMO](https://fiffty.github.io/react-treeview-mui/)
+* [Example code](https://github.com/fiffty/react-treeview-mui/blob/master/demo/example.js)
 
 ![react-treeview-mui Demo Gif](http://minigrande.com/treelist-demo.gif)
 
