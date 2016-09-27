@@ -1,0 +1,31 @@
+{
+  "name": "react-treeview-mui",
+  "version": "0.1.0",
+  "description": "React Component for treeviews that can use material-ui",
+  "main": "./src/index.js",
+  "keywords": [
+    "react",
+    "react-component",
+    "material",
+    "design",
+    "material-ui"
+  ],
+  "author": "Jin Yoo",
+  "license": "MIT",
+  "devDependencies": {
+    "material-ui": "^0.15.4",
+    "react-scripts": "0.6.0",
+    "react-tap-event-plugin": "^1.0.0",
+    "react-addons-css-transition-group": "^15.3.2"
+  },
+  "peerDependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
