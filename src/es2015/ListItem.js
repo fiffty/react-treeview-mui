@@ -1,0 +1,39 @@
+import React, {Component, PropTypes} from 'react'
+
+class ListItem extends Component {
+    render() {
+        const {primaryText, style} = this.props
+        const {onTouchTap, leftIcon} = this.props
+
+        const styles = {
+            root: {
+                cursor: 'pointer',
+                transition: 'all 0.25s ease-in-out'
+            },
+            primaryText: {
+                lineHeight: '32px'
+            }
+        }
+
+        return (
+            <div 
+                style={Object.assign({}, styles.root, style)}
+                onTouchTap={onTouchTap}>
+                {leftIcon}
+                <span style={Object.assign({}, styles.primaryText)}>
+                    {primaryText}
+                </span>
+            </div>
+        )
+    }
+}
+
+ListItem.PropTypes = {
+    primaryText: PropTypes.string.isRequired,
+    style: PropTypes.object.isRequired,
+    leftIcon: PropTypes.element,
+    rightIcon: PropTypes.element,
+    onTouchTap: PropTypes.func
+}
+
+export default ListItem
