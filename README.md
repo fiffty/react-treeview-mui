@@ -14,12 +14,41 @@ $ npm install --save react-treeview-mui
 ```
 
 ```javascript
+import import React, {Component, PropTypes} from 'react'
 // With material-ui
-import {MuiTreeList} from 'react-treeview-mui'
 // be sure to have <MuiTreeList /> inside <MuiThemeProvider />
-
-// With custom styling
+import {MuiTreeList} from 'react-treeview-mui'
+// Without material-ui styling
 import {TreeList} from 'react-treeview-mui'
+
+// UI state (e.g., expanded list items) is tracked locally
+const listItems = [...,{title: 'List Item'},...]
+class MyComponent extends Component {
+	render() {
+		<MuiTreeList
+			listItems={listItems}
+			contentKey={'title'} />
+	}
+}
+
+// UI state is tracked outside of <MuiTreeList />
+// Maybe through Redux
+class MySecondComponent extends Component {
+	render() {
+		<MuiTreeList 
+			listItems={listItems}
+			contentKey={'title'}
+			useFolderIcons={true}
+			haveSearchbar={true}
+			listItemIsEnabled={this.props.listItemIsEnabled}
+			expandedListItems={this.props.expandedListItems}
+			activeListItem={this.props.activeListItem}
+			handleTouchTap={this.props.handleTouchTap}
+			handleTouchTapInSearchMode={this.props.handleTouchTapInSearchMode}
+			handleSearch={this.props.handleSearch}
+			searchTerm={this.props.searchTerm} />
+	}
+}
 ```
 
 ## Usage
