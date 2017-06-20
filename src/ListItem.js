@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -30,12 +34,12 @@ var ListItem = function (_Component) {
     _createClass(ListItem, [{
         key: 'render',
         value: function render() {
-            var _props = this.props;
-            var primaryText = _props.primaryText;
-            var style = _props.style;
-            var _props2 = this.props;
-            var onTouchTap = _props2.onTouchTap;
-            var leftIcon = _props2.leftIcon;
+            var _props = this.props,
+                primaryText = _props.primaryText,
+                style = _props.style;
+            var _props2 = this.props,
+                onTouchTap = _props2.onTouchTap,
+                leftIcon = _props2.leftIcon;
 
 
             var styles = {
@@ -66,12 +70,12 @@ var ListItem = function (_Component) {
     return ListItem;
 }(_react.Component);
 
-ListItem.PropTypes = {
-    primaryText: _react.PropTypes.string.isRequired,
-    style: _react.PropTypes.object.isRequired,
-    leftIcon: _react.PropTypes.element,
-    rightIcon: _react.PropTypes.element,
-    onTouchTap: _react.PropTypes.func
+ListItem.propTypes = {
+    primaryText: _propTypes2.default.string.isRequired,
+    style: _propTypes2.default.object.isRequired,
+    leftIcon: _propTypes2.default.element,
+    rightIcon: _propTypes2.default.element,
+    onTouchTap: _propTypes2.default.func
 };
 
 exports.default = ListItem;

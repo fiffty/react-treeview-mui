@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react'
+import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import ListItem from './ListItem'
 
@@ -69,10 +70,10 @@ class TreeList extends Component {
                         color: (listItem.disabled) ? 'rgba(0,0,0,0.4)' : 'rgba(0,0,0,0.87)',
                         overflow: 'hidden',
                         transform: 'translateZ(0)',
-                        transition: 'none'                       
+                        transition: 'none'
                     }
-                } 
-                return listItem            
+                }
+                return listItem
             })
         const searchTerm = (this.props.searchTerm) ? this.props.searchTerm : this.state.searchTerm
         if (searchTerm) {
@@ -114,8 +115,8 @@ class TreeList extends Component {
                             onTouchTap={()=> {
                                 if (listItem.disabled) return
                                 this.handleTouchTap(listItem, i)
-                            }} />                   
-                    )                   
+                            }} />
+                    )
                 } else {
                     return null
                 }
@@ -140,7 +141,7 @@ class TreeList extends Component {
             <div style={Object.assign({}, styles.root, style)}>
                 {children}
                 {haveSearchbar &&
-                    <form 
+                    <form
                         style={{padding: '0px 16px'}}
                         onSubmit={(e) => {
                             e.preventDefault()
