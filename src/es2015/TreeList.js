@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import { CSSTransitionGroup } from 'react-transition-group'
 import ListItem from './ListItem'
 
 class TreeList extends Component {
@@ -157,9 +157,9 @@ class TreeList extends Component {
                             placeholder="Search"
                             id={'searchfield'} />
                     </form>}
-                <ReactCSSTransitionGroup transitionName="tree-list" transitionEnterTimeout={300} transitionLeaveTimeout={150}>
+                <CSSTransitionGroup transitionName="tree-list" transitionEnterTimeout={300} transitionLeaveTimeout={150}>
                     {listItemsJSX}
-                </ReactCSSTransitionGroup>
+                </CSSTransitionGroup>
             </div>
         )
 

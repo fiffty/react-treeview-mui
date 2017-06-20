@@ -14,9 +14,7 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _reactAddonsCssTransitionGroup = require('react-addons-css-transition-group');
-
-var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
+var _reactTransitionGroup = require('react-transition-group');
 
 var _ListItem = require('./ListItem');
 
@@ -209,7 +207,7 @@ var TreeList = function (_Component) {
                         id: 'searchfield' })
                 ),
                 _react2.default.createElement(
-                    _reactAddonsCssTransitionGroup2.default,
+                    _reactTransitionGroup.CSSTransitionGroup,
                     { transitionName: 'tree-list', transitionEnterTimeout: 300, transitionLeaveTimeout: 150 },
                     listItemsJSX
                 )
