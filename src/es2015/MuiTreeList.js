@@ -1,5 +1,6 @@
-import React, {Component, PropTypes} from 'react'
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import React, {Component} from 'react'
+import PropTypes from 'prop-types'
+import { CSSTransitionGroup } from 'react-transition-group'
 import ListItem from 'material-ui/List/ListItem'
 import TextField from 'material-ui/TextField'
 import OpenIcon from 'material-ui/svg-icons/navigation/expand-more'
@@ -72,10 +73,10 @@ class TreeList extends Component {
                         cursor: (listItem.disabled) ? 'not-allowed' : 'pointer',
                         color: (listItem.disabled) ? 'rgba(0,0,0,0.4)' : 'rgba(0,0,0,0.87)',
                         overflow: 'hidden',
-                        transform: 'translateZ(0)'                       
+                        transform: 'translateZ(0)'
                     }
-                } 
-                return listItem            
+                }
+                return listItem
             })
         const searchTerm = (this.props.searchTerm) ? this.props.searchTerm : this.state.searchTerm
         if (searchTerm) {
@@ -118,8 +119,8 @@ class TreeList extends Component {
                             onTouchTap={()=> {
                                 if (listItem.disabled) return
                                 this.handleTouchTap(listItem, i)
-                            }} />                   
-                    )                   
+                            }} />
+                    )
                 } else {
                     return null
                 }
@@ -137,7 +138,7 @@ class TreeList extends Component {
             <div style={Object.assign({}, styles.root, style)}>
                 {children}
                 {haveSearchbar &&
-                    <form 
+                    <form
                         style={{padding: '0px 16px'}}
                         onSubmit={(e) => {
                             e.preventDefault()
@@ -153,9 +154,9 @@ class TreeList extends Component {
                             fullWidth={true}
                             id={'searchfield'} />
                     </form>}
-                <ReactCSSTransitionGroup transitionName="tree-list" transitionEnterTimeout={300} transitionLeaveTimeout={150}>
+                <CSSTransitionGroup transitionName="tree-list" transitionEnterTimeout={300} transitionLeaveTimeout={150}>
                     {listItemsJSX}
-                </ReactCSSTransitionGroup>
+                </CSSTransitionGroup>
             </div>
         )
 

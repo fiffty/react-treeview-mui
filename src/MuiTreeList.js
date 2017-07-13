@@ -10,9 +10,11 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactAddonsCssTransitionGroup = require('react-addons-css-transition-group');
+var _propTypes = require('prop-types');
 
-var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _reactTransitionGroup = require('react-transition-group');
 
 var _ListItem = require('material-ui/List/ListItem');
 
@@ -103,10 +105,10 @@ var TreeList = function (_Component) {
             var _this2 = this;
 
             // required props
-            var _props = this.props;
-            var children = _props.children;
-            var listItems = _props.listItems;
-            var contentKey = _props.contentKey;
+            var _props = this.props,
+                children = _props.children,
+                listItems = _props.listItems,
+                contentKey = _props.contentKey;
             // optional props
 
             var style = this.props.style ? this.props.style : {};
@@ -114,9 +116,9 @@ var TreeList = function (_Component) {
             var expandedListItems = this.props.expandedListItems ? this.props.expandedListItems : this.state.expandedListItems;
             var activeListItem = this.props.activeListItem ? this.props.activeListItem : this.state.activeListItem;
             var listHeight = this.props.listHeight ? this.props.listHeight : '48px';
-            var _props2 = this.props;
-            var haveSearchbar = _props2.haveSearchbar;
-            var handleSearch = _props2.handleSearch;
+            var _props2 = this.props,
+                haveSearchbar = _props2.haveSearchbar,
+                handleSearch = _props2.handleSearch;
 
 
             var listItemsModified = listItems.map(function (listItem, i, inputArray) {
@@ -216,7 +218,7 @@ var TreeList = function (_Component) {
                         id: 'searchfield' })
                 ),
                 _react2.default.createElement(
-                    _reactAddonsCssTransitionGroup2.default,
+                    _reactTransitionGroup.CSSTransitionGroup,
                     { transitionName: 'tree-list', transitionEnterTimeout: 300, transitionLeaveTimeout: 150 },
                     listItemsJSX
                 )
@@ -297,22 +299,22 @@ var TreeList = function (_Component) {
 }(_react.Component);
 
 TreeList.contextTypes = {
-    muiTheme: _react.PropTypes.object
+    muiTheme: _propTypes2.default.object
 };
 
 TreeList.propTypes = {
-    listItems: _react.PropTypes.array.isRequired,
-    contentKey: _react.PropTypes.string.isRequired,
-    style: _react.PropTypes.object,
-    expandedListItems: _react.PropTypes.array,
-    activeListItem: _react.PropTypes.number,
-    handleTouchTap: _react.PropTypes.func,
-    handleTouchTapInSearchMode: _react.PropTypes.func,
-    handleSearch: _react.PropTypes.func,
-    listHeight: _react.PropTypes.number,
-    useFolderIcons: _react.PropTypes.bool,
-    haveSearchbar: _react.PropTypes.bool,
-    searchTerm: _react.PropTypes.string
+    listItems: _propTypes2.default.array.isRequired,
+    contentKey: _propTypes2.default.string.isRequired,
+    style: _propTypes2.default.object,
+    expandedListItems: _propTypes2.default.array,
+    activeListItem: _propTypes2.default.number,
+    handleTouchTap: _propTypes2.default.func,
+    handleTouchTapInSearchMode: _propTypes2.default.func,
+    handleSearch: _propTypes2.default.func,
+    listHeight: _propTypes2.default.number,
+    useFolderIcons: _propTypes2.default.bool,
+    haveSearchbar: _propTypes2.default.bool,
+    searchTerm: _propTypes2.default.string
 };
 
 exports.default = TreeList;

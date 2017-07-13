@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react'
+import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 
 class ListItem extends Component {
     render() {
@@ -16,7 +17,7 @@ class ListItem extends Component {
         }
 
         return (
-            <div 
+            <div
                 style={Object.assign({}, styles.root, style)}
                 onTouchTap={onTouchTap}>
                 {leftIcon}
@@ -28,7 +29,7 @@ class ListItem extends Component {
     }
 }
 
-ListItem.PropTypes = {
+ListItem.propTypes = {
     primaryText: PropTypes.string.isRequired,
     style: PropTypes.object.isRequired,
     leftIcon: PropTypes.element,
