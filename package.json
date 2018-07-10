@@ -1,6 +1,6 @@
 {
   "name": "react-treeview-mui",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "React Component for treeviews that can use material-ui",
   "main": "./src/index.js",
   "keywords": [
@@ -8,7 +8,9 @@
     "react-component",
     "material",
     "design",
-    "material-ui"
+    "material-ui",
+    "treeview",
+    "tree"
   ],
   "author": "Jin Yoo",
   "license": "MIT",
