@@ -181,13 +181,15 @@ class TreeList extends React.Component {
             <TextField hintText="Search" fullWidth={true} id={'searchfield'} />
           </form>
         )}
-        <CSSTransitionGroup
-          transitionName="tree-list"
-          transitionEnterTimeout={300}
-          transitionLeaveTimeout={150}
-        >
-          <List>{listItemsJSX}</List>
-        </CSSTransitionGroup>
+        <List>
+          <CSSTransitionGroup
+            transitionName="tree-list"
+            transitionEnterTimeout={300}
+            transitionLeaveTimeout={150}
+          >
+            {listItemsJSX}
+          </CSSTransitionGroup>
+        </List>
       </div>
     );
 
