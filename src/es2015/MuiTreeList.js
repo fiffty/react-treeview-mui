@@ -269,18 +269,20 @@ TreeList.contextTypes = {
 };
 
 TreeList.propTypes = {
-  listItems: PropTypes.array.isRequired,
-  contentKey: PropTypes.string.isRequired,
-  style: PropTypes.object,
-  expandedListItems: PropTypes.array,
   activeListItem: PropTypes.number,
+  children: PropTypes.any,
+  contentKey: PropTypes.string.isRequired,
+  expandedListItems: PropTypes.array,
+  handleSearch: PropTypes.func,
   handleTouchTap: PropTypes.func,
   handleTouchTapInSearchMode: PropTypes.func,
-  handleSearch: PropTypes.func,
-  listHeight: PropTypes.number,
-  useFolderIcons: PropTypes.bool,
   haveSearchbar: PropTypes.bool,
+  listHeight: PropTypes.number,
+  listItems: PropTypes.array.isRequired,
   searchTerm: PropTypes.string,
+  startingDepth: PropTypes.number,
+  style: PropTypes.object,
+  useFolderIcons: PropTypes.bool,
 };
 
 export default TreeList;
