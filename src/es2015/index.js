@@ -1,4 +1,4 @@
-import TreeList from './TreeList'
-import MuiTreeList from './MuiTreeList'
+import TreeList from './TreeList';
+import MuiTreeList from './MuiTreeList';
 
-export {TreeList, MuiTreeList}
+export { TreeList, MuiTreeList };
