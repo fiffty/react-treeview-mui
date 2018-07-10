@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransitionGroup } from 'react-transition-group';
 import ListItem from './ListItem';
 
-class TreeList extends Component {
+class TreeList extends React.Component {
   constructor(props) {
     super(props);
 
@@ -272,16 +272,20 @@ class TreeList extends Component {
 }
 
 TreeList.propTypes = {
-  listItems: PropTypes.array.isRequired,
-  contentKey: PropTypes.string.isRequired,
-  style: PropTypes.object,
-  expandedListItems: PropTypes.array,
   activeListItem: PropTypes.number,
+  children: PropTypes.any,
+  contentKey: PropTypes.string.isRequired,
+  listItems: PropTypes.array.isRequired,
+  expandedListItems: PropTypes.array,
   handleTouchTap: PropTypes.func,
-  listHeight: PropTypes.number,
+  handleTouchTapInSearchMode: PropTypes.func,
   haveSearchbar: PropTypes.bool,
-  onSearch: PropTypes.func,
   icons: PropTypes.object,
+  listHeight: PropTypes.number,
+  onSearch: PropTypes.func,
+  searchTerm: PropTypes.string,
+  startingDepth: PropTypes.number,
+  style: PropTypes.object,
 };
 
 export default TreeList;

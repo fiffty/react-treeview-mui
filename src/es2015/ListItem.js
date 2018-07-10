@@ -17,7 +17,7 @@ class ListItem extends Component {
     };
 
     return (
-      <div style={Object.assign({}, styles.root, style)} onTouchTap={onTouchTap}>
+      <div style={Object.assign({}, styles.root, style)} onClick={onTouchTap}>
         {leftIcon}
         <span style={Object.assign({}, styles.primaryText)}>{primaryText}</span>
       </div>
