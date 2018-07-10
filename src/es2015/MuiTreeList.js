@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransitionGroup } from 'react-transition-group';
-import { ListItem, TextField } from '@material-ui/core';
+import { List, ListItem, TextField, ListItemText, ListItemIcon } from '@material-ui/core';
 import OpenIcon from '@material-ui/icons/ExpandMore';
 import CloseIcon from '@material-ui/icons/ExpandLess';
 import FolderIcon from '@material-ui/icons/Folder';
@@ -133,21 +133,21 @@ class TreeList extends React.Component {
         return (
           <ListItem
             key={'treeListItem-' + i}
-            primaryText={listItem._primaryText}
-            style={Object.assign({}, listItem._styles.root)}
-            leftIcon={getLeftIcon(listItem, this.props.useFolderIcons)}
-            rightIcon={
-              !listItem.children ? null : expandedListItems.indexOf(i) === -1 ? (
-                <OpenIcon />
-              ) : (
-                <CloseIcon />
-              )
-            }
-            onTouchTap={() => {
+            style={listItem._styles.root}
+            onClick={() => {
               if (listItem.disabled) return;
               this.handleTouchTap(listItem, i);
             }}
-          />
+            button
+          >
+            <ListItemIcon>{getLeftIcon(listItem, this.props.useFolderIcons)}</ListItemIcon>
+            <ListItemText primary={listItem._primaryText} />
+            {!listItem.children ? null : expandedListItems.indexOf(i) === -1 ? (
+              <OpenIcon />
+            ) : (
+              <CloseIcon />
+            )}
+          </ListItem>
         );
       } else {
         return null;
@@ -186,7 +186,7 @@ class TreeList extends React.Component {
           transitionEnterTimeout={300}
           transitionLeaveTimeout={150}
         >
-          {listItemsJSX}
+          <List>{listItemsJSX}</List>
         </CSSTransitionGroup>
       </div>
     );
