@@ -15,21 +15,21 @@
   "author": "Jin Yoo",
   "license": "MIT",
   "devDependencies": {
-    "babel-cli": "^6.24.1",
+    "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "eslint": "^4.19.1",
-    "eslint-plugin-react": "^7.10.0",
-    "eslint-plugin-prettier": "^2.6.2"
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.10.0"
   },
   "dependencies": {
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
     "@material-ui/core": "^1.0.0",
     "@material-ui/icons": "^1.0.0",
-    "react-transition-group": "^1.1.3",
-    "react-scripts": "1.0.7",
-    "prop-types": "^15.5.10"
+    "prop-types": "^15.5.10",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "^1.1.5",
+    "react-transition-group": "^1.1.3"
   },
   "scripts": {
     "start": "react-scripts start",
